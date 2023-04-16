@@ -8,7 +8,7 @@ import { BarkAuthenticationClient } from "@barksh/client-authentication-browser"
 import { BarkAuthenticationToken, BarkRefreshToken } from "@barksh/token-browser";
 import * as React from "react";
 
-export type UseRefreshTokenResult = {
+export type UseAuthenticationAndRefreshTokenResult = {
 
     readonly loading: true;
 } | {
@@ -21,7 +21,7 @@ export type UseRefreshTokenResult = {
 export const useAuthenticationAndRefreshToken = (
     barkClient: BarkAuthenticationClient,
     onFailed?: () => void,
-): UseRefreshTokenResult => {
+): UseAuthenticationAndRefreshTokenResult => {
 
     const isFailed = React.useRef<boolean>(false);
 
