@@ -26,16 +26,16 @@ export const useAuthenticationToken = (
 
     const getTokenMethod = async () => {
 
-        const authenticationToken = await barkClient.getAuthenticationToken();
+        const tempAuthenticationToken = await barkClient.getAuthenticationToken();
 
-        if (!authenticationToken) {
+        if (!tempAuthenticationToken) {
 
             if (typeof onFailed === 'function') {
                 onFailed();
             }
             return;
         }
-        setAuthenticationToken(authenticationToken);
+        setAuthenticationToken(tempAuthenticationToken);
     };
 
     React.useEffect(() => {

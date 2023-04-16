@@ -26,16 +26,16 @@ export const useRefreshToken = (
 
     const getTokenMethod = async () => {
 
-        const refreshToken = await barkClient.getRefreshToken();
+        const tempRefreshToken = await barkClient.getRefreshToken();
 
-        if (!refreshToken) {
+        if (!tempRefreshToken) {
 
             if (typeof onFailed === 'function') {
                 onFailed();
             }
             return;
         }
-        setRefreshToken(refreshToken);
+        setRefreshToken(tempRefreshToken);
     };
 
     React.useEffect(() => {

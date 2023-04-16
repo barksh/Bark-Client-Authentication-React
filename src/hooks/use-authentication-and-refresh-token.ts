@@ -30,13 +30,13 @@ export const useAuthenticationAndRefreshToken = (
 
     const getAuthenticationTokenMethod = async () => {
 
-        const authenticationToken = await barkClient.getAuthenticationToken();
+        const tempAuthenticationToken = await barkClient.getAuthenticationToken();
 
         if (isFailed.current) {
             return;
         }
 
-        if (!authenticationToken) {
+        if (!tempAuthenticationToken) {
 
             isFailed.current = true;
 
@@ -45,18 +45,18 @@ export const useAuthenticationAndRefreshToken = (
             }
             return;
         }
-        setAuthenticationToken(authenticationToken);
+        setAuthenticationToken(tempAuthenticationToken);
     };
 
     const getRefreshTokenMethod = async () => {
 
-        const refreshToken = await barkClient.getRefreshToken();
+        const tempRefreshToken = await barkClient.getRefreshToken();
 
         if (isFailed.current) {
             return;
         }
 
-        if (!refreshToken) {
+        if (!tempRefreshToken) {
 
             isFailed.current = true;
 
@@ -65,7 +65,7 @@ export const useAuthenticationAndRefreshToken = (
             }
             return;
         }
-        setRefreshToken(refreshToken);
+        setRefreshToken(tempRefreshToken);
     };
 
     React.useEffect(() => {
