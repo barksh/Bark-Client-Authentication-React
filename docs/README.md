@@ -11,8 +11,8 @@ React Client for Bark Authentication
 
 ```sh
 yarn add @barksh/client-authentication-react
-yarn add @barksh/client-authentication-browser # Peer Dependency
+yarn add @barksh/client-authentication-browser @barksh/authentication-types @barksh/token-browser # Peer Dependency
 # Or
 npm install @barksh/client-authentication-react --save
-npm install @barksh/client-authentication-browser --save # Peer Dependency
+npm install @barksh/client-authentication-browser @barksh/authentication-types @barksh/token-browser --save # Peer Dependency
 ```

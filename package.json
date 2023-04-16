@@ -1,0 +1,45 @@
+{
+  "name": "@barksh/client-authentication-react",
+  "version": "1.0.0",
+  "description": "React Client for Bark Authentication",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarkSH/Bark-Client-Authentication-React.git"
+  },
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BarkSH/Bark-Client-Authentication-React/issues"
+  },
+  "homepage": "https://github.com/BarkSH/Bark-Client-Authentication-React#readme",
+  "peerDependencies": {
+    "@barksh/authentication-types": "*",
+    "@barksh/client-authentication-browser": "*",
+    "@barksh/token-browser": "*"
+  },
+  "devDependencies": {
+    "@barksh/authentication-types": "^1.0.0",
+    "@barksh/client-authentication-browser": "^1.8.3",
+    "@barksh/token-browser": "^1.4.0",
+    "@sudoo/triforce": "^3.11.0",
+    "global-jsdom": "*",
+    "jsdom": "*"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "instrument": true,
+    "reporter": [
+      "json",
+      "text-summary"
+    ],
+    "report-dir": "coverage",
+    "sourceMap": true
+  }
+}
